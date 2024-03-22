@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Security;
 using LinkedLists;
 
 namespace ProgrammingAssignment2
@@ -28,13 +29,44 @@ namespace ProgrammingAssignment2
 			{
 				// extract input values from string
 				BuildLinkedListFromString(input);
-
+					
 				// Add your code between this comment
 				// and the comment below. You can of
 				// course add more space between the
 				// comments as needed
+				int sum = 0;
+				int count = 0;
+				int currVal = GetValue();
+
+				while ( GetValue() != -1)
+
+				{
+					 count++;
+					GetValue();
+					sum = sum + currVal;
+					currVal = GetValue();
+					decimal mean;
+
+					if (currVal > 0)
+					{
+						mean = currVal / currVal;
+						Console.WriteLine(count);
+						Console.WriteLine(mean);
+					}					
+					else
+					{
+						sum = 0;
+					}
+					
+						
 
 
+
+
+
+
+
+				}
 
 				// Don't add or modify any code below
 				// this comment
